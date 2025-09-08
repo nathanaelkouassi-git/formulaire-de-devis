@@ -78,38 +78,40 @@
     }
 
     button:hover {
-      background-color: #072bb5;
+      background-color: #3c62f5; /* nuance plus claire au survol */
     }
   </style>
 </head>
 <body>
   <div class="form-container">
     <h1>Demande de devis</h1>
-    <form action="https://docs.google.com/forms/d/e/TON_FORM_ID/formResponse" method="POST" target="_blank">
+    <!-- Remplace YOUR_WEBAPP_URL par l'URL de ton Apps Script déployé -->
+    <form action="https://script.google.com/macros/s/AKfycbxPCwMF0IyL1lCmC0dcwoaJXw_1_F5Tkh2lp45n7eTsacgD0p07mnZUwdf090OrEiIM/exec" method="POST">
       
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="entry.123456" required>
+      <label for="nomprenom">Nom et prénom *</label>
+      <input type="text" id="nomprenom" name="NomPrenom" required>
       
       <label for="entreprise">Nom de l’entreprise *</label>
-      <input type="text" id="entreprise" name="entry.234567" required>
+      <input type="text" id="entreprise" name="Entreprise" required>
       
-      <label for="nom">Nom et prénom *</label>
-      <input type="text" id="nom" name="entry.345678" required>
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="Email" required>
       
       <label for="raison">Raison de la demande *</label>
-      <select id="raison" name="entry.456789" required>
+      <select id="raison" name="Raison" required>
         <option value="">-- Sélectionnez une option --</option>
-        <option value="Refonte de site">Refonte de site</option>
-        <option value="Création de A à Z">Création de A à Z</option>
-        <option value="Débogage">Débogage</option>
-        <option value="Assistance">Assistance</option>
+        <option value="refonte d'un site web">refonte d'un site web</option>
+        <option value="creation de A à Z d'un site">creation de A à Z d'un site</option>
+        <option value="debodage d'un site">debodage d'un site</option>
+        <option value="assistance et conseil dans la creation d'un site">assistance et conseil dans la creation d'un site</option>
       </select>
       
       <label for="commentaire">Commentaires supplémentaires</label>
-      <textarea id="commentaire" name="entry.567890" placeholder="Décrivez vos besoins..."></textarea>
+      <textarea id="commentaire" name="Commentaire" placeholder="Décrivez vos besoins..."></textarea>
       
       <button type="submit">Envoyer la demande</button>
     </form>
   </div>
 </body>
 </html>
+
